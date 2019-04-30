@@ -222,7 +222,7 @@ input[type="color"]::-webkit-color-swatch {
   background: var(--second-color);
 }
 
-.main-container-canvas__circle {
+.circle {
   border-radius: 50%;
   background: var(--second-color);
 }
@@ -246,5 +246,8 @@ input[type="color"]::-webkit-color-swatch {
   opacity: 0.6;
 }
 
-
+.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
 
