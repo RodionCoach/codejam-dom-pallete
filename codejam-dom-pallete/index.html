@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html class="no-js">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>codejam-dom-palette</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./styles/normalize.css" />
-  <link rel="stylesheet" href="./styles/font.css" />
-  <link rel="stylesheet" href="./styles/style.css" />
-  <link rel="icon" type="image/png" href="assets/favicon.ico"/>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./palette/styles/normalize.css" />
+  <link rel="stylesheet" href="./palette/styles/font.css" />
+  <link rel="stylesheet" href="./palette/styles/style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.ico" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="./palette/scripts/script.js"></script>
 </head>
 
 <body>
@@ -30,37 +34,55 @@
     </div>
   </header>
   <main>
-  <div class="main--container-pallets">
-    <div class="palette">
+    <div class="main--container-pallets">
       <div class="palette--tools">
         <ul>
-          <li>Paint bucket</li>
-          <li>Choose color</li>
-          <li>Move</li>
-          <li>Transform</li>
+          <li class="palette--tools-paint_bucket">
+            <span>Paint bucket</span>
+          </li>
+          <li class="palette--tools-cshoose_color">
+            <span>Choose color</span>
+          </li>
+          <hr color="#e0e0e0">
+          <li class="palette--tools-move">
+            <span>Move</span>
+          </li>
+          <li class="palette--tools-transfom">
+            <span>Transform</span>
+          </li>
         </ul>
       </div>
       <div class="palette--color">
         <ul>
-          <li>Current color</li>
-          <li>Prev color</li>
-          <li>red</li>
-          <li>blue</li>
+          <li>
+            <input type="color" value="#000000" data-color="#ff0000">
+            <span>Current color</span>
+          </li>
+          
+          <li>
+            <input type="color" value="#FFFFFF" data-color="#ff0000">
+            <span>Prev color</span></li>
+          <hr color="#e0e0e0">
+          <li class="palette--color-third_color" data-color="#00eeff">
+            <span>red</span>
+          </li>
+          <li class="palette--color-fourth_color" data-color="#ff0000">
+            <span>blue</span>
+          </li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="main-container-canvas">
-    <div class="main-container-canvas__square figure" data-figure="square" data-color="#000000"></div>
-    <div class="main-container-canvas__square figure" data-figure="square" data-color="#000000"></div>
-    <div class="main-container-canvas__square figure" data-figure="square" data-color="#000000"></div>
-    <div class="main-container-canvas__square figure" data-figure="square" data-color="#000000"></div>
-    <div class="main-container-canvas__square figure" data-figure="square" data-color="#000000"></div>
-    <div class="main-container-canvas__square figure" data-figure="square" data-color="#000000"></div>
-    <div class="main-container-canvas__circle figure" data-figure="circle" data-color="#000000"></div>
-    <div class="main-container-canvas__square figure" data-figure="square" data-color="#000000"></div>
-    <div class="main-container-canvas__square figure" data-figure="square" data-color="#000000"></div>
-  </div>
+    <div class="main-container-canvas">
+      <div class="main-container-canvas__square figure" data-figure="square" data-order="1" data-color="#000000"></div>
+      <div class="main-container-canvas__square figure" data-figure="square" data-order="2" data-color="#000000"></div>
+      <div class="main-container-canvas__square figure" data-figure="square" data-order="3" data-color="#000000"></div>
+      <div class="main-container-canvas__square figure" data-figure="square" data-order="4" data-color="#000000"></div>
+      <div class="main-container-canvas__square figure" data-figure="square" data-order="5" data-color="#000000"></div>
+      <div class="main-container-canvas__square figure" data-figure="square" data-order="6" data-color="#000000"></div>
+      <div class="main-container-canvas__circle figure" data-figure="circle" data-order="7" data-color="#000000"></div>
+      <div class="main-container-canvas__square figure" data-figure="square" data-order="8" data-color="#000000"></div>
+      <div class="main-container-canvas__square figure" data-figure="square" data-order="9" data-color="#000000"></div>
+    </div>
   </main>
 
 
