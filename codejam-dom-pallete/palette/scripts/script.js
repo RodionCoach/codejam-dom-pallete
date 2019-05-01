@@ -45,7 +45,6 @@
     };
 
     if (e.target.id == 4) {
-      removeEvents(canvasContainer, 'click', changeColorOnCurrent);
       canvasContainer.addEventListener('click', transformtHandler);
     }
   })
@@ -64,11 +63,12 @@
   }
 
   function transformtHandler(e) {
-    e.stopPropagation();
     if (e.target.dataset.figure == 'square') {
       e.target.classList.add('circle');
+      e.target.dataset.figure = 'circle';
     } else {
-      e.target.classList.remove('circle');
+      e.target.classList.remove('circle')
+      e.target.dataset.figure = 'square';
     }
 
   }
@@ -79,9 +79,5 @@
 
   function changeColorOnPrev(e) {
     e.target.style.backgroundColor = prevColor;
-  }
-
-  function removeEvents(el, event, handler) {
-    el.removeEventListener(event, handler);
   }
 })();
