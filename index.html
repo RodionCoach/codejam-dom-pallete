@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>codejam-dom-palette</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./palette/styles/normalize.css" />
+  <link rel="stylesheet" href="./palette/styles/font.css" />
+  <link rel="stylesheet" href="./palette/styles/style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.ico" />
+
+</head>
+<body>
+  <header>
+    <div class="header--burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="header--name">
+      <a href="#main"><span>CodeJam - Palette</span></a>
+    </div>
+    <div class="header--dots-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+  <main>
+    <div class="main--container-pallets">
+      <div class="palette--tools">
+        <ul class="palette--tools-list">
+          <li class="palette--tools-paint_bucket">
+            Paint bucket
+          </li>
+          <li class="palette--tools-cshoose_color">
+            Choose color
+          </li>
+          <hr color="#e0e0e0">
+          <li class="palette--tools-move">
+            Move
+          </li>
+          <li class="palette--tools-transform">
+            Transform
+          </li>
+        </ul>
+      </div>
+      <div class="palette--color">
+        <ul>
+          <li class="palette--color-current_color">
+            <input type="color" value="#000000" data-color="#ff0000">
+            <span>Current color</span>
+          </li>
+          <li class="palette--color-prev_color"> 
+            <input type="color" value="#FFFFFF" data-color="#ff0000">
+            <span>Prev color</span></li>
+          <hr color="#e0e0e0">
+          <li class="palette--color-third_color" data-color="#00eeff">
+            <span>red</span>
+          </li>
+          <li class="palette--color-fourth_color" data-color="#ff0000">
+            <span>blue</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-container-canvas">
+      <div class="main-container-canvas__square" data-figure="square" data-order="1"></div>
+      <div class="main-container-canvas__square" data-figure="square" data-order="2"></div>
+      <div class="main-container-canvas__square" data-figure="square" data-order="3"></div>
+      <div class="main-container-canvas__square" data-figure="square" data-order="4"></div>
+      <div class="main-container-canvas__square" data-figure="square" data-order="5"></div>
+      <div class="main-container-canvas__square" data-figure="square" data-order="6"></div>
+      <div class="main-container-canvas__square circle" data-figure="circle" data-order="7"></div>
+      <div class="main-container-canvas__square" data-figure="square" data-order="8"></div>
+      <div class="main-container-canvas__square" data-figure="square" data-order="9"></div>
+    </div>
+  </main>
+
+
+</body>
+<script src="./palette/scripts/script.js"></script>
+
+</html>
