@@ -1,11 +1,11 @@
 :root {
   --primary-color: rgba(0, 0, 0, 0.87);
-  --second-color: rgba(0, 0, 0, 0.54);
+  --second-color: #757575;
   --background-color: #FFFFFF;
   --background-shadow-main: rgba(0, 0, 0, 0.24);
   --background-shadow-low: rgba(0, 0, 0, 0.12);
-  --background-first-const-color:#ff0000;
-  --background-second-const-color:#00eeff;
+  --background-first-const-color: #ff0000;
+  --background-second-const-color: #00eeff;
   --text-font: Roboto;
 }
 
@@ -46,7 +46,7 @@ header {
   background: #FFFFFF;
 }
 
-header > div{
+header>div {
   display: inline-block;
 }
 
@@ -106,7 +106,7 @@ main {
   display: block;
 }
 
-.main--container-pallets{
+.main--container-pallets {
   position: absolute;
   float: left;
   height: 100vh;
@@ -154,24 +154,24 @@ main {
 
 input[type=color] {
   position: relative;
-  outline-color: rgba(0,0,0,0.0);
+  outline-color: rgba(0, 0, 0, 0.0);
   margin-right: 33px;
   top: 6px;
   width: 24px;
   height: 24px;
-	border: none;
+  border: none;
   padding: 0;
   background: none;
   transition: all 0.2s ease;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
+  padding: 0;
 }
 
 input[type="color"]::-webkit-color-swatch {
-	border: solid 1px #000000;
-	border-radius: 50%;
+  border: solid 1px #000000;
+  border-radius: 50%;
 }
 
 .palette--color-third_color:before {
@@ -198,7 +198,8 @@ input[type="color"]::-webkit-color-swatch {
   background-color: var(--background-second-const-color);
 }
 
-.palette--color-third_color, .palette--color-fourth_color {
+.palette--color-third_color,
+.palette--color-fourth_color {
   padding-left: 60px;
   opacity: 1;
   transition: all 0.2s ease;
@@ -218,12 +219,11 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .main-container-canvas__square {
-  background: var(--second-color);
+  background-color: var(--second-color);
 }
 
 .circle {
   border-radius: 50%;
-  background: var(--second-color);
 }
 
 .figure:hover {
@@ -240,13 +240,29 @@ input[type="color"]::-webkit-color-swatch {
   transform: scale(1.2);
 }
 
-.palette--color-third_color:hover, .palette--color-fourth_color:hover{
+.palette--color-third_color:hover,
+.palette--color-fourth_color:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
+/* draggable effects*/
+
+.daraggable * {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+.main-container-canvas__square.over {
+  border: 2px dashed #000;
+}
+
+/* active tools */
 .active {
   color: var(--primary-color);
   font-weight: bold;
 }
-
